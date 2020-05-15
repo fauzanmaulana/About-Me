@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif
+}
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+section{
+    display: flex;
+    width: 100%;
+    height: 90vh;
+}
+
+.home, .profile{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home img{
+    border-radius: 50%;
+}
+
+.profile img{
+    border-radius: 50%;
+}
+
+.home h2{
+    font-size: 2pc;
+    line-height: 3rem;
+}
+
+.profile h2{
+    line-height: 2rem;
+}
+
+.row{
+    display: flex;
+    height: 90vh;
+}
+
+@media screen and (max-width: 600px) {
+    .row{
+        flex-direction: column;
+    }
+
+    .col h2{
+        margin: 0;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .row{
+        flex-direction: row;
+        align-items: center;
+    }
+}
